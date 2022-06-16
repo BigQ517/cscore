@@ -205,9 +205,9 @@ namespace CSCore.Codecs
 
             try
             {
-                var filename = TryFindFilename(uri);
-                if (!String.IsNullOrEmpty(filename))
-                    return GetCodec(filename);
+                //var filename = TryFindFilename(uri);
+                //if (!String.IsNullOrEmpty(filename))
+                //    return GetCodec(filename);
 
                 return OpenWebStream(uri.ToString());
             }

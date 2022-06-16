@@ -140,9 +140,10 @@ namespace CSCore.Codecs.MP3
 
                 if ((stream.Read(buffer, 3, 1)) < 1)
                 {
+                    return false;
                     Debug.WriteLine("Mp3Frame::FindFrame: Stream EOF.");
                     //do not throw EndOfStreamException --> will be caught and will trigger retry
-                    throw new InternalEofException("Stream is EOF.");
+                  //  throw new InternalEofException("Stream is EOF.");
                 }
 
                 /*totalRead += read;
